@@ -1,0 +1,12 @@
+<% if notice %>
+<p id="notice" ><%= notice %></p>
+<% end %>
+
+<h1>PageParty!!!!!!!!!!!!!!!</h1>
+
+<% @vote_lines.each do |vote_line| %>
+   <div class="entry" >
+      <h3><%= vote_line.code %></h3>
+      <%= vote_line.votes %>
+   </div>
+<% end %>
