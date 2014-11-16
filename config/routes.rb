@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get 'home/index'
+#  get 'home/index'
+#  patch 'home/update'
+  resources :home
 
   resources :vote_lines
 
   
-  root :to=>'home#index', :as=>'home'
+  root :to=>'home#index', :as=>'home1'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

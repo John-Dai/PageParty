@@ -2,11 +2,28 @@
 <p id="notice" ><%= notice %></p>
 <% end %>
 
+
+
 <h1>PageParty!!!!!!!!!!!!!!!</h1>
 
+
+
+<!--
+<%= form_tag("home/update", method: "patch") do %>
 <% @vote_lines.each do |vote_line| %>
-   <div class="entry" >
-      <h3><%= vote_line.code %></h3>
-      <%= vote_line.votes %>
-   </div>
+	<%= radio_button_tag(:choice, vote_line.id) %>
+	<%= label_tag(:choice, vote_line.code) %>
+	<br>
+	<% end %>
+	<%= submit_tag("Vote") %>
 <% end %>
+-->
+
+<% @vote_lines.each do |vote_line| %>
+	<%= link_to vote_line.code, edit_vote_line_path(vote_line) %>
+	<%= vote_line.votes %>
+	<br>
+<% end %>
+
+<td><%= button_to 'Push', {:controller=>'home'}, :method=>:post %></td>
+

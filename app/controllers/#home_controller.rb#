@@ -11,7 +11,6 @@ class HomeController < ApplicationController
 	if vote_line.votes>0
 		@maxid=vote_line.id
 		@maxcode=vote_line.code
-		logger.debug vote_line.code
 	end
      end
      
