@@ -7,13 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 VoteLine.delete_all
-VoteLine.create(:code=>'<h1>This is heading 1</h1>',
+VoteLine.create(:code=>'<h1>Click on a line to</h1>',
 		:votes=>0)
-VoteLine.create(:code=>'<h2>This is heading 2</h2>',
+VoteLine.create(:code=>'<h2>vote. The one with</h2>',
 		:votes=>0)
-VoteLine.create(:code=>'<h3>This is heading 3</h3>',
+VoteLine.create(:code=>'<h3>the highest will be</h3>',
 		:votes=>0)
-VoteLine.create(:code=>'<h4>This is heading 4</h4>',
+VoteLine.create(:code=>'<h4>appended to this page\'s</h4>',
 		:votes=>0)
-VoteLine.create(:code=>'<h5>This is heading 5</h5>',
+VoteLine.create(:code=>'<h5>source code!</h5>',
 		:votes=>0)
+
+File.open("public/wsj_min", "r").each_line do |line|
+	if line.length<200
+		CodeLine.create(:code=>line)
+	end
+end
