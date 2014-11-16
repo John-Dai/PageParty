@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# this script will default to DEVELOPMENT if you dont force it
+ENV['RAILS_ENV'] ||= 'production'
+
+require File.expand_path("./config/environment", ENV['OPENSHIFT_REPO_DIR'])
+
+Rails.logger.debug 'daily cron job!'
+HomeController.new.create
