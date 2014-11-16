@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :applied_lines
+
 #  get 'home/index'
 #  patch 'home/update'
   resources :home

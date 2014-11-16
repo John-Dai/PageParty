@@ -27,3 +27,8 @@
 
 <td><%= button_to 'Push', {:controller=>'home'}, :method=>:post %></td>
 
+
+<% @applied_lines.each do |applied_line| %>
+	<%= applied_line.code.html_safe %>
+	<br>
+<% end %>
