@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :code_lines
+
   resources :applied_lines
 
 #  get 'home/index'
