@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="PageParty">
 <head>
   <title>PageParty</title>
   <%= stylesheet_link_tag :all %>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= stylesheet_link_tag "main", :media => "all" %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div ng-view>
+	<%= yield %>
+</div>
 
 </body>
 </html>

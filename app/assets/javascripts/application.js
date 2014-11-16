@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require angular
+//= require main
 //= require bootstrap.min
+//= require flipclock.min
 //= require turbolinks
 //= require_tree .
+
