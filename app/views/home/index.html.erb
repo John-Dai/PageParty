@@ -32,12 +32,3 @@
 	<%= applied_line.code.html_safe %>
 	<br>
 <% end %>
-
-<div class="container shares" id="shares" ng-controller="SharesCtrl" ng-init="init()">
-  <div class="share-container" ng-repeat="entry in entries">
-    <div class="share-code">{{entry.company.code}}</div>
-    <div class="share-name">{{entry.company.name}}</div>
-    <div class="share-value">${{entry.share.value}}</div>
-    <div class="share-variation"><img ng-src="{{entry.variation == 'up' && 'up.png' || 'down.png'}}"></div>
-  </div>
-</div>
